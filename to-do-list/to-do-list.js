@@ -11,9 +11,11 @@ Display();
 document.querySelector('#push').onclick =
     function () {
         if (document.querySelector('.did input').value.length == 0) {
-            alert("Please Enter a Task");
+            document.getElementById('alert').innerHTML=
+             `<h3>Please Enter a Task Before Adding!!</h3>`
         }
         else{
+         document.getElementById('alert').innerHTML=`''`
         const Data = document.querySelector(".did input").value;
         if (edit_id != null) {
             list.splice(edit_id, 1, { 'name': Data });
@@ -55,9 +57,11 @@ function Display() {
 
 }
 function DeleteInfo(id) {
+    const v=confirm('Do You Want To Delete This Item !!');
+    if(v) {
     list.splice(id, 1);
     Save(list);
-    Display();
+    Display();}
 }
 function EditInfo(id) {
     edit_id = id;
