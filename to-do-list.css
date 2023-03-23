@@ -119,13 +119,15 @@ textarea:focus{
         width: 100%;
     }
     body{
-        background-color: blue;
+        
     }
     #push{
-        margin-left: 40px;
+        margin-left: 10px;
         display: block;
     }
     .main{
+        margin: 50px 40px;
+    
 
     }
     #alert{
