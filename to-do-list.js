@@ -10,13 +10,13 @@ if (listValue != null) {
 Display();
 document.querySelector('#push').onclick =
     function () {
-        if (document.querySelector('.did input').value.length == 0) {
+        if (document.querySelector('.did textarea').value.length == 0) {
             document.getElementById('alert').innerHTML= `<h3>Please Enter a Task Before Adding!!</h3>`
             
         }
         else{
             document.getElementById('alert').innerHTML=`''`   
-        const Data = document.querySelector(".did input").value;
+        const Data = document.querySelector(".did textarea").value;
         if (edit_id != null) {
             list.splice(edit_id, 1, { 'name': Data });
             edit_id = null;
@@ -27,7 +27,7 @@ document.querySelector('#push').onclick =
         Save(list);
         Display();
         btn.innerText=btnValue;
-        document.querySelector('.did input').value = "";
+        document.querySelector('.did textarea').value = "";
 
     }
 
