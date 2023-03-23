@@ -65,7 +65,7 @@ function DeleteInfo(id) {
 }
 function EditInfo(id) {
     edit_id = id;
-    document.querySelector('.did input').value = list[id].name;
+    document.querySelector('.did textarea').value = list[id].name;
     list.splice(id, 1, recordDisplay);
     btn.innerText="UPDATE";
     Save(list);
